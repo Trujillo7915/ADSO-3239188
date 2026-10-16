@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0906;
+  background-image: radial-gradient(circle at 50% 18%, rgba(222, 192, 104, 0.14), transparent 55%);
+  color: #f5f2eb;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(10, 9, 6, 0.92);
+  border-bottom: 1px solid rgba(222, 192, 104, 0.2);
+  padding: 1.1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #dec068;
+  color: #dec068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: rgba(222, 192, 104, 0.08);
+}
+
+.brand-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+.brand-subtitle {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  color: #a39e93;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1.2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  border: 1px solid rgba(222, 192, 104, 0.35);
+  background: rgba(222, 192, 104, 0.06);
+  color: #dec068;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+.hero-title em {
+  color: #dec068;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* BOTONES */
+.btn-gold {
+  background: #dec068;
+  color: #0f0d08;
+  border: 1px solid #dec068;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(222, 192, 104, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-gold:hover {
+  background: #ebd07e;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: #14120d;
+  color: #e2dfd7;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: #dec068;
+  color: #dec068;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+}
+
+/* CONTENEDORES Y PESTAÑAS */
+.container {
+  max-width: 1050px;
+  margin: 0 auto 3rem;
+  padding: 0 1.2rem;
+}
+
+.sub-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* TARJETAS */
+.card {
+  background: #12100b;
+  border: 1px solid rgba(222, 192, 104, 0.22);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.form-card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.card-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(222, 192, 104, 0.15);
+  padding-bottom: 1rem;
+}
+
+.card-header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #dec068;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-header p {
+  color: #9c9689;
+  font-size: 0.88rem;
+}
+
+/* FORMULARIOS */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #d6d1c4;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: #1a1710;
+  border: 1px solid rgba(222, 192, 104, 0.25);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.92rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #dec068;
+  box-shadow: 0 0 0 2px rgba(222, 192, 104, 0.15);
+}
+
+/* TABLAS */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.9rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+th {
+  color: #dec068;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(222, 192, 104, 0.3);
+}
+
+.btn-delete {
+  background: rgba(220, 38, 38, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.msg {
+  font-size: 0.88rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}

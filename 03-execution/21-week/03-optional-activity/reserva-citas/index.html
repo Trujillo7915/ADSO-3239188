@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Reserva de Citas · MVC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Barra superior neutral -->
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-logo">RC</div>
+      <div>
+        <h1 class="brand-title">RESERVA DE CITAS</h1>
+        <span class="brand-subtitle">SISTEMA DE GESTIÓN · MVC</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <button id="btn-view-clients" class="btn-gold active">Gestión de Clientes</button>
+      <button id="btn-view-reservations" class="btn-outline">Reservar Cita</button>
+    </nav>
+  </header>
+
+  <!-- Contenedor dinámico donde AJAX inyecta las vistas -->
+  <main id="app-container" class="container">
+    <p>Cargando vista...</p>
+  </main>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>

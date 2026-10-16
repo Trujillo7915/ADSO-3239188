@@ -1,0 +1,60 @@
+<section class="module-wrapper">
+  <div class="sub-tabs">
+    <button type="button" id="tab-res-register" class="btn-gold">1. Agendar Cita</button>
+    <button type="button" id="tab-res-list" class="btn-outline">2. Citas Reservadas</button>
+  </div>
+
+  <!-- APARTADO 1: FORMULARIO DE RESERVA -->
+  <div id="section-res-register" class="card form-card">
+    <div class="card-header">
+      <h2>Generar Reserva de Cita</h2>
+      <p>Selecciona un cliente registrado y asigna los datos de su cita.</p>
+    </div>
+
+    <form id="form-reservation">
+      <div class="form-group">
+        <label for="res-client-id">Cliente (client_id)</label>
+        <select id="res-client-id" required>
+          <option value="">Seleccione un cliente...</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="res-name">Nombre de la Cita</label>
+        <input type="text" id="res-name" placeholder="Ej: Consulta General / Asesoría" required />
+      </div>
+
+      <div class="form-group">
+        <label for="res-description">Descripción / Motivo</label>
+        <textarea id="res-description" rows="3" placeholder="Detalles o motivo de la reserva..." required></textarea>
+      </div>
+
+      <p id="res-msg" class="msg"></p>
+      <button type="submit" class="btn-gold full-width">Confirmar Reserva →</button>
+    </form>
+  </div>
+
+  <!-- APARTADO 2: LISTADO DE CITAS -->
+  <div id="section-res-list" class="card hidden">
+    <div class="card-header">
+      <h2>Listado de Citas Reservadas</h2>
+      <p>Citas activas asociadas a los clientes registrados.</p>
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ID Cita</th>
+            <th>Nombre de la Cita</th>
+            <th>Descripción</th>
+            <th>ID Cliente</th>
+            <th>Nombre del Cliente</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="table-reservations"></tbody>
+      </table>
+    </div>
+  </div>
+</section>

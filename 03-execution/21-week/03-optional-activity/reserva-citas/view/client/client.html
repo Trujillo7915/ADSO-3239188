@@ -1,0 +1,85 @@
+<section class="module-wrapper">
+  <!-- Sub-menú para cambiar entre Registrar y Ver Listado -->
+  <div class="sub-tabs">
+    <button type="button" id="tab-btn-register" class="btn-gold">1. Registrar Cliente</button>
+    <button type="button" id="tab-btn-list" class="btn-outline">2. Vista Listado de Clientes</button>
+  </div>
+
+  <!-- APARTADO 1: REGISTRAR CLIENTE -->
+  <div id="section-client-register" class="card form-card">
+    <div class="card-header">
+      <h2>Registrar Nuevo Cliente</h2>
+      <p>Ingresa los datos personales del cliente para el sistema de agendamiento.</p>
+    </div>
+
+    <form id="form-client">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="client-type-doc">Tipo de Documento</label>
+          <select id="client-type-doc" required>
+            <option value="">Seleccione...</option>
+            <option value="CC">Cédula de Ciudadanía (CC)</option>
+            <option value="TI">Tarjeta de Identidad (TI)</option>
+            <option value="CE">Cédula de Extranjería (CE)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="client-doc">Número de Documento</label>
+          <input type="text" id="client-doc" placeholder="Ej: 10203040" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="client-name">Nombre Completo</label>
+        <input type="text" id="client-name" placeholder="Ej: Ana Gómez" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="client-phone">Teléfono / WhatsApp</label>
+          <input type="tel" id="client-phone" placeholder="Ej: 3001234567" required />
+        </div>
+
+        <div class="form-group">
+          <label for="client-address">Dirección</label>
+          <input type="text" id="client-address" placeholder="Ej: Calle 12 # 34-56" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="client-email">Correo Electrónico</label>
+        <input type="email" id="client-email" placeholder="Ej: cliente@correo.com" required />
+      </div>
+
+      <p id="client-msg" class="msg"></p>
+      <button type="submit" class="btn-gold full-width">Guardar Cliente →</button>
+    </form>
+  </div>
+
+  <!-- APARTADO 2: VISTA DEL LISTADO DE CLIENTES (Oculto por defecto hasta hacer clic) -->
+  <div id="section-client-list" class="card hidden">
+    <div class="card-header">
+      <h2>Listado Oficial de Clientes</h2>
+      <p>Clientes registrados actualmente en el modelo.</p>
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tipo</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="table-clients"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
